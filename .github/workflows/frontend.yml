@@ -4,9 +4,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'frontend/**' # This triggers the workflow only when changes are made in the frontend directory
-
+    paths-ignore:
+      - 'backend/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
