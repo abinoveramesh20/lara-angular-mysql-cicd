@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'backend/**'
+      - 'lara-angular-mysql-cicd/backend/**'
 
 jobs:
   deploy:
@@ -26,6 +26,6 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: | 
-           cd /var/www/html/project
-           git pull origin branch
+           cd /var/www/html/lara-angular
+           git pull origin main
            composer install
