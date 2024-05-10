@@ -11,10 +11,10 @@ jobs:
   deploy:
     name: Deploy 
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     defaults:
       run:
         working-directory: backend
-    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
       
