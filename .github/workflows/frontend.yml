@@ -19,7 +19,7 @@ jobs:
         working-directory: frontend
 
       - name: Build Angular app
-        run: ng build --configuration=production
+        run: ng build 
         working-directory: frontend
 
       - name: Copy build folder to server
