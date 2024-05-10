@@ -22,7 +22,7 @@ jobs:
         working-directory: frontend
 
       - name: Build React app
-        run: npm run build
+        run: ng build
         working-directory: frontend
 
         
