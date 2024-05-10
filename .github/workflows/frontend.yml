@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'frontend/**' # This triggers the workflow only when changes are made in the frontend directory
+      - 'lara-angular-mysql-cicd/frontend/**' # This triggers the workflow only when changes are made in the frontend directory
 
 jobs:
   deploy:
@@ -28,5 +28,5 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: frontend/dist/frontend/
-          target: /var/www/html/lara-angular-mysql-cicd/frontend/
+          source: frontend/dist/
+          target: /var/www/html/lara-angular/frontend/
