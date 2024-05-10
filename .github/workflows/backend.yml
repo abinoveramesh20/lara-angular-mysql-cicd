@@ -18,9 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Composer install
-        run: sudo apt install php8.3
-        working-directory: backend
-      - name: Composer install
         run: composer install
         working-directory: backend
 
